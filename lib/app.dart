@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc_architecture/i18n/i18n.dart';
 import 'package:flutter_bloc_architecture/route.dart';
 import 'package:flutter_bloc_architecture/theme.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
@@ -21,7 +22,7 @@ class App extends StatelessWidget {
           userComponent(),
         ],
         child: MaterialApp(
-          title: translate('app_name'),
+          title: translate(I18n.APP_NAME),
           theme: AppTheme.defaultTheme,
           localizationsDelegates: [
             GlobalMaterialLocalizations.delegate,
