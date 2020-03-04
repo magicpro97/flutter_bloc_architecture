@@ -12,10 +12,19 @@ dependencies:
   flutter_bloc: ^3.2.0
   equatable: ^1.1.1
   flutter_hooks: ^0.8.0
+  flutter_translate: ^1.5.7
+  flutter_localizations:
+    sdk: flutter
+  flutter_translate_annotations: ^1.0.1
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
+  flutter_translate_gen: ^1.2.4
+  build_runner:
 
 flutter:
   uses-material-design: true
+
+  assets:
+    - assets/i18n/
