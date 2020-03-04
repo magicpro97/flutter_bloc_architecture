@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc_architecture/route.dart';
 import 'package:flutter_bloc_architecture/theme.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
+import 'package:flutter_translate/flutter_translate.dart';
 import 'package:flutter_translate/localized_app.dart';
 
 import 'di/di.dart';
@@ -12,15 +13,15 @@ class App extends StatelessWidget {
     var localizationDelegate = LocalizedApp.of(context).delegate;
 
     return glolalRepository(
-      repository: [
+      repositories: [
         userRepositoryComponent(),
       ],
       child: globaBloc(
-        globalBlocs: [
+        blocs: [
           userComponent(),
         ],
         child: MaterialApp(
-          title: "Bloc",
+          title: translate('app_name'),
           theme: AppTheme.defaultTheme,
           localizationsDelegates: [
             GlobalMaterialLocalizations.delegate,
