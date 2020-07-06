@@ -13,13 +13,13 @@ class App extends StatelessWidget {
   Widget build(BuildContext context) {
     var localizationDelegate = LocalizedApp.of(context).delegate;
 
-    return glolalRepository(
+    return globalRepository(
       repositories: [
         userRepositoryComponent(),
       ],
-      child: globaBloc(
+      child: globalBloc(
         blocs: [
-          userComponent(),
+          authenticationBlocComponent(),
         ],
         child: MaterialApp(
           title: translate(I18n.APP_NAME),

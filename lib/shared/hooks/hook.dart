@@ -3,7 +3,7 @@ import 'package:flutter/widgets.dart';
 import 'package:flutter_bloc_architecture/features/screen.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
 
-void userAddFrameCallbackForFlashScreenHook() {
+void useAddFrameCallbackForFlashScreenHook() {
   Hook.use(_AddFrameCallbackForFlashScreenHook());
 }
 

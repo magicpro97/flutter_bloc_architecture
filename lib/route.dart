@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:flutter_bloc_architecture/features/home/bloc/bloc.dart';
 
+import 'features/home/bloc/home_bloc.dart';
 import 'features/screen.dart';
 
 var bootStage = 1;
@@ -16,7 +16,7 @@ RouteFactory routes() {
       return PageRouteBuilder(pageBuilder: (_, __, ___) => FlashScreen());
     }
 
-    final arguments = settings.arguments as Map<String, dynamic> ?? {};
+    // final arguments = settings.arguments as Map<String, dynamic> ?? {};
     switch (settings.name) {
       case HomeScreen.route:
         screen = BlocProvider(

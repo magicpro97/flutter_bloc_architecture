@@ -1,11 +1,21 @@
-part of 'bloc.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:freezed_annotation/freezed_annotation.dart';
 
-class HomeBloc extends Bloc<HomeEvent, HomeBlocState> {
-  @override
-  HomeBlocState get initialState => InitialHomeBlocState();
+part 'home_bloc.freezed.dart';
+
+//@freezed
+abstract class HomeEvent {}
+
+@freezed
+abstract class HomeState {
+  const factory HomeState.initial() = _Initial;
+}
+
+class HomeBloc extends Bloc<HomeEvent, HomeState> {
+  HomeBloc() : super(HomeState.initial());
 
   @override
-  Stream<HomeBlocState> mapEventToState(
+  Stream<HomeState> mapEventToState(
     HomeEvent event,
   ) async* {
     // TODO: Add Logic
