@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
-MultiBlocProvider globaBloc({
+MultiBlocProvider globalBloc({
   @required List<BlocProvider> blocs,
   @required Widget child,
 }) {
